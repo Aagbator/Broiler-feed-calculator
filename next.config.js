@@ -6,14 +6,15 @@ const withPWA = require("@ducanh2912/next-pwa").default({
     swcMinify: true,
     disable: process.env.NODE_ENV === "development",
     workboxOptions: {
-      disableDevLogs: true,
+        disableDevLogs: true,
     },
     // ... other options you like
-  });
-  
-  /** @type {import('next').NextConfig} */
-  const nextConfig = {
+});
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    output: 'export',
     // ... other options you like
-  };
-  
-  module.exports = withPWA(nextConfig);
+};
+
+module.exports = withPWA(nextConfig);
